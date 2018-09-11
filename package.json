@@ -23,6 +23,7 @@
     },
     "scripts": {
         "build-dev": "webpack --mode production",
-        "prestart": "yarn run build-dev"
+        "prestart": "yarn run build-dev",
+        "serve": "node server.js"
     }
 }
