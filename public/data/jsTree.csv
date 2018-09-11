@@ -1,0 +1,10 @@
+skill,detail,score,color,parent
+"JavaScript",
+"basic","","0","","JavaScript",
+"ES5","hoisting, closure, event bubbling...","3","#1169AE","basic",
+"ES6","block scope, arrow function, spread/rest operatoer...","2.5","#F6854D","basic",
+"async","promise, async/await","3","#617CBE","basic",
+"package managers","npm, yarn","3","#0073AD","JavaScript",
+"build tools","webpack, eslint...","2","#E58E00","JavaScript",
+"framework","React.js, Redux...","3","#EB2C2F","JavaScript",
+"server-side-rendering","React.js","2","#59666C","JavaScript",

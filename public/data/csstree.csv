@@ -1,0 +1,6 @@
+skill,detail,score,color
+"CSS",
+"basic of CSS","box-sizing, position, display, horizontal/vertical center, image, background, basic animation...","3","#808080",
+"layout","float, flexbox, bootstrap","2.5","#2E2575",
+"RWD","viewport, media-query...","2","#E54F24",
+"Architecture","BEM","2","#FF9900"

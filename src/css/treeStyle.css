@@ -1,0 +1,72 @@
+svg text {
+    fill: black;
+    font-weight: bold;
+    font-size: 14px
+}
+@media (max-width: 768px) {
+    svg text {
+        font-size: 12px;
+    }
+}
+
+svg .link {
+    fill: none;
+    stroke: #555;
+    stroke-opacity: 0.4;
+    stroke-width: 1px;
+}
+
+svg .grid path{
+    stroke-width: 0;
+}
+svg .node circle {
+    fill: #999;
+}
+
+svg .node--internal circle {
+    fill: #555;
+}
+svg .node--internal text {
+    font-size: 20px;
+    text-shadow: 0 2px 0 #fff, 0 -2px 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff;
+}
+@media (max-width: 768px) {
+    svg .node--internal text {
+        font-size: 16px;
+    }
+}
+
+svg .node--leaf text {
+    fill: white;
+}
+svg .shadow {
+    /* -webkit-filter: drop-shadow( -1.5px -1.5px 1.5px #000 ); */
+    /* filter: drop-shadow( -1.5px -1.5px 1.5px #000 ); */
+}
+svg .xAxis .tick text{
+    fill: black;
+}
+svg .grid .tick line{
+    stroke: grey;
+    stroke-dasharray: 5, 10;
+    opacity: 0.7;
+}
+
+svg .rectG text {
+    /* fill: white; */
+}
+
+svg .zoom {
+    cursor: move;
+    fill: none;
+    pointer-events: all;
+}
+
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}

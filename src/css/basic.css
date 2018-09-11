@@ -1,0 +1,347 @@
+/* --------------
+ * Personal Reset
+ * -------------- */
+*{
+    position: relative;
+    box-sizing: border-box;
+}
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------
+* background
+* -------------- */
+.bg-white{
+    background-color: #fefefe;
+}
+
+.bg-lemon{
+    background-color: #f5fdc8;
+}
+
+.bg-pink{
+    background-color: #ffebf5;
+}
+
+.bg-blue{
+    background-color: #d3f3ff;
+}
+
+.bg-orange{
+    background-color: #ffd3ae;
+}
+
+/* --------------
+* link anchor
+* -------------- */
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: initial;
+}
+
+a:hover,
+a:focus,
+a:active{
+    text-decoration: none;
+    color: #484848;
+}
+
+/* --------------
+* list
+* -------------- */
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* --------------
+* Fonts
+* -------------- */
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,700');
+
+body{
+	font-family: 'Cormorant Garamond', Helvetica, arial, sans-serif;
+}
+
+/* heading */
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    color: #484848;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0; /* p的文字間距預設是0 */
+    margin-top: 8px;
+    color: #484848;
+    -webkit-margin-before: 8px;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}
+
+.heading{
+    font-size: 72px;
+    color: #484848;
+    margin-bottom: 48px;
+}
+
+.info-title{
+    font-size: 48px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+}
+.info-subtitle{
+    font-size: 40px;
+    margin-bottom: 48px;
+    padding-bottom: 8px;
+}
+
+.titleHr::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 174px;
+    height: 4px;
+    background-color: #51c4d8;
+}
+
+.subtitleHr::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 72px;
+    height: 4px;
+    background-color: #ffc300;
+}
+
+.info-desc{
+    font-size: 16px;
+    line-height: 32px;
+}
+
+@media (max-width: 768px) {
+    .info-title{
+        font-size: 40px;
+    }
+    .info-subtitle{
+        font-size: 32px;
+        margin-bottom: 24px;
+    }
+    .info-desc{
+        line-height: 24px;
+    }
+}
+
+/* --------------
+* utils
+* -------------- */
+.u-push-l{ float: left !important; }
+.u-push-r{ float: right !important; }
+
+/* --------------
+* Icons
+* -------------- */
+@font-face {
+    font-family: 'fontello';
+    src: url('/font/fontello.eot?751566');
+    src: url('/font/fontello.eot?751566#iefix') format('embedded-opentype'),
+         url('/font/fontello.woff2?751566') format('woff2'),
+         url('/font/fontello.woff?751566') format('woff'),
+         url('/font/fontello.ttf?751566') format('truetype'),
+         url('/font/fontello.svg?751566#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/* 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?69031617#fontello') format('svg');
+    }
+}
+*/
+.icon-btn [class^="icon-"]:before, 
+.icon-btn [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    /* margin-right: .2em; */
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    /* line-height: 1em; */
+    line-height: 24px;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    /* margin-left: .2em; */
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+.icon-btn .icon-star:before { content: '\e805'; } /* '' */
+.icon-btn .icon-down-open:before { content: '\e80f'; } /* '' */
+
+/* --------------
+* Button
+* -------------- */
+.btn{
+    /* Remove First 移除ios input style */
+    appearance: none;
+    /* 基礎定位 */
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    /* btn外觀 */
+    height: 32px;
+    padding: 8px; /* 上下的高度由padding去撐開 */
+    min-width: 64px;
+    background-color: #d1d2d3;
+    border: 0;
+    border-radius: 4px;
+    outline: 0;
+    /* overflow: hidden; */
+    /* btn文字 */
+    font-size: inherit;
+    text-align: center;
+    line-height: 32px;
+    text-decoration: none;
+    letter-spacing: 0;
+    /* 使用者互動 */
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s;
+}
+
+.btn.btn-lg{
+    /* btn外觀 */
+    height: 48px;
+    padding: 8px 56px;
+    border-radius: 5px;
+    /* btn文字 */
+    font-size: 16px;
+    line-height: 48px;
+}
+
+/* --------------
+* utils
+* -------------- */
+.u-p-t-24{ padding-top: 24px !important; }
+.u-b-t-24{ padding-bottom: 24px !important; }
+.u-text-center{ text-align: center !important; }
+
+.u-m-collapse{ margin: 0 -16px; }
+
+.u-sm-hide{
+    display: block;
+}
+@media (max-width: 768px) {
+    .u-sm-hide{ display: none; }
+}
+
+.u-sm-show{ display: none }
+@media (max-width: 768px) {
+    .u-sm-show{ display: block; }
+}
+
+/* --------------
+* container
+* -------------- */
+.svg-wrapper{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    /* border: 1px solid #ccc; */
+}
+@media (max-width: 768px) {
+    .svg-wrapper {
+        padding-top: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .info {
+        padding: 24px 0;
+    }
+}
+
+.section__inner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+@media (max-width: 768px) {
+    .section__inner {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }    
+}
+
+/* --------------
+* imgBox
+* -------------- */
+
+.image-box{
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-box .image-box__ratio{
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+}
+
+.image-box__ratio.image-box__ratio__3-4{
+    padding-top: calc(100% * 3 / 4);
+}
+
+
+.image-box .image{
+    /* 定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 圖片 */
+    background-size: cover;
+    background-position: center;
+}

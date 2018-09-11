@@ -1,0 +1,28 @@
+#js-svg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#js-svg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.geometry-05 {
+    position: absolute;
+    right: 5%;
+    transform: rotate(24deg);
+    opacity: 0.8;
+}
+
+.geometry-06 {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+}

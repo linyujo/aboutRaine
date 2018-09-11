@@ -1,0 +1,29 @@
+.experience-image{
+    display: block;
+    width: 260px;
+    height: 80px;
+}
+
+.experience-image-wrapper{
+    margin-top: 300px;
+}
+@media (max-width: 768px) {
+    .experience-image{
+        margin: 0 auto;
+    }
+    .experience-image-wrapper{
+        margin-top: 24px;
+    }
+}
+
+.geometry-01{
+    bottom: 10%;
+    left: 30%;
+    position: absolute;
+}
+
+.geometry-02{
+    position: absolute;
+    right: 30%;
+    transform: rotate(-30deg) !important;
+}

@@ -1,0 +1,35 @@
+.footer{
+    padding: 40px 0;
+    background-color: darkgray;
+}
+@media(max-width: 768px) {
+    .footer{
+        text-align: center;
+    }
+}
+
+.footer .catcrush-logo{
+    display: block;
+    width: 120px;
+    height: 114px;
+    background: url("/images/catcrush.ico");
+    background-position: center;
+    background-size: cover;
+}
+@media(max-width: 768px) {
+    .footer .catcrush-logo{
+        margin: 0 auto;
+    }
+}
+
+.footer .contact-item__label{
+    color: #f4ae31;
+}
+
+.footer ul li{
+    padding-bottom: 8px;
+}
+
+.copyright p {
+    color: #fefefe;
+}

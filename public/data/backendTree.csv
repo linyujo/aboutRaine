@@ -1,0 +1,13 @@
+skill,detail,score,color,parent
+"backend",
+"Language","","","","backend",
+"Node.js","framwork - Express","2","#6DB33F","Language",
+"Security","XSS, CSRF, OAuth, JWT-token","1","#0678BE","backend",
+"Database","","","","backend",
+"Relational Database","MySQL, Oracle","1","#FF9900","Database",
+"NoSQL Database","","","","Database",
+"MongoDB","","2","#005F0F","NoSQL Database",
+"Redis","","1","#00618A","NoSQL Database",
+"Web Server","","","","backend",
+"Nginx","","1","#040404","Web Server",
+"Web Sockets","","2","#CA212F","backend"
