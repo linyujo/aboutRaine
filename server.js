@@ -28,7 +28,7 @@ app.use("/", function(req, res){
 })
 
 var server = http.createServer(app);
-var PORT = 8000;
+var PORT = 4000;
 
 server.listen(PORT, function() { 
     console.log("已啟動server")
