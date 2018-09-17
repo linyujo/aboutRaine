@@ -1,5 +1,6 @@
 import {
     isSmallDevice,
+    toolTip,
     stratify, 
     createNodes,
     treemap,
@@ -29,6 +30,8 @@ export default function htmlTreeInit () {
     };
 
     createSVG();
+
+    d3.select(`#${SVG_ID}`).call(toolTip);
 
     const svg = $(`#${SVG_ID}`);
     const svgHeight = svg.height();

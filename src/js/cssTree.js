@@ -16,7 +16,7 @@ export default function cssTreeInit () {
     
     const CSS_CHART_WRAPPER_ID = "css-svg-wrapper";
     const SVG_ID = "css-svg";
-    const G_WRAPPER_ID = 'svg-g-wrapper';
+    const G_WRAPPER_ID = 'css-g-wrapper';
 
     const chartWrapper = d3.select(`#${CSS_CHART_WRAPPER_ID}`);
     const groupWrapperTransition = isSmallDevice ? "translate(30, 0) scale(0.8)" : "translate(30, 0) scale(0.9)";
