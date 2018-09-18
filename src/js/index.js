@@ -69,14 +69,6 @@ $(document).ready(function() {
     
     handleScroll();
 
-    // cssTreeInit();
-
-    // htmlTreeInit();
-
-    // jsTreeInit();
-
-    // backendTreeInit();
-
     if ($(window).width() > 768) {
         // rellax init
         let rellax = new Rellax('.rellax', {
