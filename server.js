@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.resolve(__dirname, './public'))); // 根目錄
 
-app.disable('x-powered-by'); // 隱藏response-header:x-powered-by
+app.use(helmet()); // 設定安全相關的http-header
 
 app.use("/", function(req, res){
     var html = path.resolve(__dirname, './public/index.html');
