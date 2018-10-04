@@ -16,9 +16,9 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(express.static(path.resolve(__dirname, './public'))); // 根目錄
-
 app.use(helmet()); // 設定安全相關的http-header
+
+app.use(express.static(path.resolve(__dirname, './public'))); // 根目錄
 
 app.use("/", function(req, res){
     var html = path.resolve(__dirname, './public/index.html');
