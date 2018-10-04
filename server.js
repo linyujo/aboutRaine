@@ -16,6 +16,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.resolve(__dirname, './public'))); // 根目錄
+
+app.disable('x-powered-by'); // 隱藏response-header:x-powered-by
+
 app.use("/", function(req, res){
     var html = path.resolve(__dirname, './public/index.html');
     fs.readFile(html, 'utf8', function(err, htmlString){
