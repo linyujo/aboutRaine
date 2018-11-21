@@ -1333,21 +1333,20 @@ p{
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
 }
+.experience-image-wrapper{
+    margin-top: 100px;
+}
 .experience-image{
     display: block;
     width: 260px;
     height: 80px;
 }
-
-.experience-image-wrapper{
-    margin-top: 300px;
-}
-@media (max-width: 768px) {
-    .experience-image{
-        margin: 0 auto;
-    }
+@media (max-width: 767px) {
     .experience-image-wrapper{
         margin-top: 24px;
+    }
+    .experience-image{
+        margin: 0 auto;
     }
 }
 
