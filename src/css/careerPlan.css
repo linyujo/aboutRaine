@@ -1,0 +1,21 @@
+.career-image-wrapper{
+    /* margin-top: 0;
+    width: 100%;
+    padding-top: 100%; */
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.career-image{
+    display: block;
+    /* border: 1px solid red; */
+}
+
+@media (max-width: 768px) {
+    .career-image{
+        margin: 0 auto;
+    }
+    /* .career-image-wrapper{
+        margin-top: 16px;
+    } */
+}

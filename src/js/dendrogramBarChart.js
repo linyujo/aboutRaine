@@ -1,4 +1,20 @@
-export const isSmallDevice = $(window).width() < 768 ? true : false; 
+export const isSmallDevice = $(window).width() < 960 ? true : false;
+
+export const deviceWidth = () => {
+    const deviceWidth = $(window).width();
+    switch (true) {
+        case (deviceWidth < 576):
+            return "extraSmall";
+        // small
+        case (deviceWidth < 768):
+            return "small";
+        // medium
+        case (deviceWidth < 960):
+            return "medium";
+        default:
+            return "large";
+    }
+};
 
 // This D3 API method gives cvs file flat data array dimensions.
 export const stratify = d3.stratify().id(d => d.id).parentId(d => d.parent);

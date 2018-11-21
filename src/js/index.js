@@ -9,6 +9,7 @@ import '../css/treeStyle.css';
 import '../css/html_css.css';
 import '../css/jsSkill.css';
 import '../css/backendSkill.css';
+import '../css/careerPlan.css';
 import '../css/contact.css';
 import '../css/footer.css';
 
@@ -22,15 +23,16 @@ function fullPageInit () {
     $('#fullpage').fullpage({
         // options here
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-        anchors:['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6'],
-        sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+        anchors:['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7'],
+        sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'],
         menu: '#nav-right-id',
         autoScrolling: false,
 		fitToSection: false,
         scrollingSpeed: 1200,
+        
         onLeave: function(origin, destination, direction){
             let leavingSection = this;
-    
+            
             // 當要離開slide 2
             if(origin.index === 1 && direction === 'down'){
                 htmlTreeInit();
@@ -69,7 +71,7 @@ $(document).ready(function() {
     
     handleScroll();
 
-    if ($(window).width() > 768) {
+    if ($(window).width() > 767) {
         // rellax init
         let rellax = new Rellax('.rellax', {
             center: true,

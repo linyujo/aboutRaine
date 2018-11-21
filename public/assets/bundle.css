@@ -1276,6 +1276,29 @@ p{
 }
 
 /* --------------
+* cover-desc
+* -------------- */
+.cover-desc{
+    text-align: center;
+    margin: 0 20%;
+    position: absolute;
+    bottom: 112px;
+    color: #dbe0e5;
+}
+
+@media (max-width: 768px) {
+    .cover-desc {
+        margin: 0 8%;
+    }
+}
+
+@media (max-width: 375px) {
+    .cover-desc {
+        display: none;
+    }
+}
+
+/* --------------
 * scrolldown-btn
 * -------------- */
 .scrolldown-btn{
@@ -1346,11 +1369,11 @@ svg text {
     font-weight: bold;
     font-size: 14px
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     svg text {
         font-size: 12px;
     }
-}
+} */
 
 svg .link {
     fill: none;
@@ -1500,6 +1523,27 @@ svg .zoom {
     position: absolute;
     top: 0;
     left: 0;
+}
+.career-image-wrapper{
+    /* margin-top: 0;
+    width: 100%;
+    padding-top: 100%; */
+    margin-top: 16px;
+    margin-left: 16px;
+}
+
+.career-image{
+    display: block;
+    /* border: 1px solid red; */
+}
+
+@media (max-width: 768px) {
+    .career-image{
+        margin: 0 auto;
+    }
+    /* .career-image-wrapper{
+        margin-top: 16px;
+    } */
 }
 .contact{
     padding: 24px 0;

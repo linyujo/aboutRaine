@@ -3,11 +3,11 @@ svg text {
     font-weight: bold;
     font-size: 14px
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     svg text {
         font-size: 12px;
     }
-}
+} */
 
 svg .link {
     fill: none;

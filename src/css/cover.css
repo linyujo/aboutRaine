@@ -29,6 +29,29 @@
 }
 
 /* --------------
+* cover-desc
+* -------------- */
+.cover-desc{
+    text-align: center;
+    margin: 0 20%;
+    position: absolute;
+    bottom: 112px;
+    color: #dbe0e5;
+}
+
+@media (max-width: 768px) {
+    .cover-desc {
+        margin: 0 8%;
+    }
+}
+
+@media (max-width: 375px) {
+    .cover-desc {
+        display: none;
+    }
+}
+
+/* --------------
 * scrolldown-btn
 * -------------- */
 .scrolldown-btn{

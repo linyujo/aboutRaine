@@ -1,5 +1,5 @@
 import {
-    isSmallDevice,
+    deviceWidth,
     toolTip,
     stratify,
     treemap,
@@ -11,14 +11,30 @@ import {
     createZoomArea
 } from "./dendrogramBarChart";
 
+import { isCanvasDrawed, canvasFinished } from './canvasMark';
+
 export default function backendTreeInit () {
     const BACKEND_CHART_WRAPPER_ID = "backend-svg-wrapper";
     const SVG_ID = "backend-svg";
     const G_WRAPPER_ID = 'backend-g-wrapper';
 
+    if (isCanvasDrawed(SVG_ID)) {
+        return;
+    };
+
     const chartWrapper = d3.select(`#${BACKEND_CHART_WRAPPER_ID}`);
 
-    const groupWrapperTransition = isSmallDevice ? "translate(32, 10) scale(0.8)" : "translate(48, 10) scale(0.9)";
+    const groupWrapperTransition = () => {
+        const width = deviceWidth();
+        switch (width) {
+            case "extraSmall":
+                return "translate(32, 10) scale(0.8)";
+            case "small":
+                return "translate(32, 10) scale(0.9)";
+            default:
+                return "translate(44, 10) scale(0.9)";
+        }
+    };
 
     const createSVG = () => {
         chartWrapper
@@ -26,7 +42,7 @@ export default function backendTreeInit () {
             .attr("id", SVG_ID)
             .append("g")
             .attr("id", G_WRAPPER_ID)
-            .attr("transform", groupWrapperTransition);
+            .attr("transform", groupWrapperTransition());
     };
 
     createSVG();
@@ -79,5 +95,7 @@ export default function backendTreeInit () {
         drawAxis(SVG_ID, G_WRAPPER_ID, svgHeight, firstEndNodeId, xScale);
         // 滑鼠hover
         hoverDetail(SVG_ID, svgHeight);
+        // 標記已畫完的canvas
+        canvasFinished(SVG_ID);
     });
 };
