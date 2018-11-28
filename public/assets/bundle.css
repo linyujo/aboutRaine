@@ -1171,10 +1171,6 @@ p{
     color: #51c4d8;
 }
 
-.header-scrolling .navbar .menu-item {
-    color: #484848;
-}
-
 @media (max-width: 960px) {
     .nav__menu{
         float: none;

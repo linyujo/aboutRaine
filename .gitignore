@@ -1,8 +1,8 @@
 # dependencies
 /node_modules
 
-# ssl
-/aboutRaine_ssl
-
 # public/assets
 /public/assets
+
+# ssl
+/aboutRaine_ssl
