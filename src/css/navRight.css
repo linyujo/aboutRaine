@@ -27,6 +27,15 @@
     transform: translateX(-50%);
     transition: all 0.3s;
 }
+
+.nav-right-item .icon-btn{
+    font-size: 18px;
+}
+
+/* -----------------
+ *  active
+ * ----------------*/
+
 .active .nav-right-item span{
     left: 24px;
     color: #fefefe;

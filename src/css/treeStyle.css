@@ -39,6 +39,11 @@ svg .node--internal text {
 svg .node--leaf text {
     fill: white;
 }
+svg .node--leaf-g text {
+    text-shadow: 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000, 1px 0 0 #000;
+    font-size: 16px;
+}
+
 svg .shadow {
     /* -webkit-filter: drop-shadow( -1.5px -1.5px 1.5px #000 ); */
     /* filter: drop-shadow( -1.5px -1.5px 1.5px #000 ); */

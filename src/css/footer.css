@@ -1,6 +1,6 @@
 .footer{
     padding: 40px 0;
-    background-color: darkgray;
+    background-color: #f7f8f9;
 }
 @media(max-width: 768px) {
     .footer{
@@ -22,8 +22,27 @@
     }
 }
 
-.footer .contact-item__label{
+/* --------------
+* footer__contact
+* -------------- */
+.footer__contact{
+    padding-top: 24px;
+}
+.footer__contact .contact-item{
+    margin-bottom: 24px;
+}
+.footer__contact .contact-item__label{
     color: #f4ae31;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.footer__contact .contact-item__link{
+    display: inline-block;
+}
+
+.footer__iconGroup{
+    padding: 24px;
 }
 
 .footer ul li{
@@ -31,5 +50,5 @@
 }
 
 .copyright p {
-    color: #fefefe;
+    color: #bdbcbc;
 }

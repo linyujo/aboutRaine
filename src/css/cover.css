@@ -2,10 +2,20 @@
 * background
 * -------------- */
 .cover--bg-covered{
-    background-image: url('../images/cover_lighter.png');
-	background-size: inherit;
+    background-image: url('../images/cover2.jpg');
+	background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+    .cover--bg-covered{
+        background-position: right -272px bottom;
+    }
+}
+@media (max-width: 576px) {
+    .cover--bg-covered{
+        background-position: right -224px bottom;
+    }
 }
 
 .cover--bg-covered::before{
@@ -15,38 +25,39 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #161616;
-	opacity: 0.1;
+	/* background-color: #161616; */
+	/* opacity: 0.1; */
 }
 
 /* --------------
 * h1 heading
 * -------------- */
 @media (max-width: 768px) {
-    .heading {
+    .cover .heading{
         font-size: 48px;
+        margin-bottom: 240px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cover .heading{
+        margin-bottom: 0;
     }
 }
 
 /* --------------
 * cover-desc
 * -------------- */
+.cover-desc--wrapper{
+    background-color: rgba(214, 214, 214, 0.5);
+    padding: 16px;
+}
+
 .cover-desc{
-    text-align: center;
-    margin: 0 20%;
-    position: absolute;
-    bottom: 112px;
-    color: #dbe0e5;
+    margin-top: -8px;
 }
-
-@media (max-width: 768px) {
-    .cover-desc {
-        margin: 0 8%;
-    }
-}
-
-@media (max-width: 375px) {
-    .cover-desc {
+@media (max-width: 576px) {
+    .cover-desc--wrapper{
         display: none;
     }
 }
@@ -58,7 +69,8 @@
     height: 48px;
     width: 48px;
     border-radius: 50%;
-    border: 2px solid #484848;
+    border: 1px solid #fefefe;
+    color: #fefefe;
     position: absolute;
     bottom: 24px;
     left: 50%;

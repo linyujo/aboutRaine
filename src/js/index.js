@@ -24,7 +24,7 @@ function fullPageInit () {
         // options here
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         anchors:['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7'],
-        sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff'],
+        sectionsColor: ['#f7f8f9', '#ffffff', '#f6f9fc', '#ffffff', '#bbd3e5', '#f5f3f4', '#ffffff'],
         menu: '#nav-right-id',
         autoScrolling: false,
 		fitToSection: false,

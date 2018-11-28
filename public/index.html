@@ -30,6 +30,9 @@
                                 <li><a href="#slide6" class="menu-item">career goal</a></li>
                                 <li><a href="#slide7" class="menu-item">contact</a></li>
                             </ul>
+                            <div class="nav__iconGroup">
+                                <a href="https://github.com/vikamirror" class="icon-btn"><i class="icon icon-github-circled"></i></a>
+                            </div>
                             <a href="#!" class="menu-toggle--close">
                                 <span></span>
                                 <span></span>
@@ -41,15 +44,23 @@
 
             <div id="fullpage">
                 
-                <div id="id-slide1" class="section cover--bg-covered" data-anchor="slide1">
+                <div id="id-slide1" class="section cover cover--bg-covered" data-anchor="slide1">
                     <div class="section__inner">
                         <div class="container">
                             <h1 class="heading rellax" data-rellax-speed="-4">Hi<br>I AM RAINE</h1>
                         </div>
                     </div> 
-                    <p class="cover-desc">
-                        Having 1 year experience as a software developer, I gathered some knowledge in releasing project, and obtained adequate knowledge from the front-end(javascript, css, HTML) to its interaction with the back-end. Aiming to achieve balance between user experience and engineering by learning new skills.
-                    </p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="cover-desc--wrapper">
+                                    <p class="cover-desc">
+                                        Having 1 year experience as a software developer, I gathered some knowledge in releasing project, and obtained adequate knowledge from the front-end to its interaction with the back-end. Aiming to achieve balance between user experience and engineering by learning new skills.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <a href="#slide2" class="scrolldown-btn"><div class="icon-btn"><i class="icon icon-down-open" ></i></div></a>
                 </div>
                
@@ -75,7 +86,11 @@
                                 </div>
                                 <div class="col-sm-5">
                                     <div class="experience-image-wrapper rellax" data-rellax-speed="1">
-                                        <img src="/images/acer_logo.png" class="experience-image" />
+                                        <div class="experience-imageBox">
+                                            <div class="experience-imageBox--inner">
+                                                <div class="experience-image" style="background-image: url('/images/acer_logo.png')"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -163,7 +178,11 @@
                                 </div>
                                 <div class="col-sm-5">
                                     <div class="career-image-wrapper rellax" data-rellax-speed="-2">
-                                        <img src="/images/design.png" class="career-image" />
+                                        <div class="career-imageBox">
+                                            <div class="carrer-imageBox--inner">
+                                                <div class="carrer-image" style="background-image: url('/images/design.png')"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>        
@@ -189,7 +208,7 @@
                                             <h5 class="contact-item__label">Email</h5>
                                             <a href="#" class="contact-item__link">linyujo@gmail.com</a>
                                         </div>
-                                        <div class="contact-item">
+                                        <div class="contact__item">
                                             <h5 class="contact-item__label">Tel</h5>
                                             <a href="#" class="contact-item__link">(+886) 0989568849</a>
                                         </div>
@@ -209,7 +228,7 @@
                                         <a href="https://catcrush.club" class="catcrush-logo"></a>
                                     </div>
                                 </div>    
-                                <div class="col-sm-2">
+                                <div class="col-xs-12 col-sm-2">
                                     <ul class="list u-p-t-24">
                                         <li class=""><a href="#slide2" class="menu-item">experience</a></li>
                                         <li class=""><a href="#slide3" class="menu-item">HTML & CSS</a></li>
@@ -219,8 +238,8 @@
                                         <li class=""><a href="#slide7" class="menu-item">contact</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-sm-4">
-                                    <div class="contact">
+                                <div class="col-xs-12 col-sm-3">
+                                    <div class="footer__contact">
                                         <div class="contact-item">
                                             <h5 class="contact-item__label">Email</h5>
                                             <a href="#" class="contact-item__link">linyujo@gmail.com</a>
@@ -229,6 +248,11 @@
                                             <h5 class="contact-item__label">Tel</h5>
                                             <a href="#" class="contact-item__link">(+886) 0989568849</a>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-3">
+                                    <div class="footer__iconGroup">
+                                        <a href="https://github.com/vikamirror" class="icon-btn"><i class="icon icon-github-circled"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -279,6 +303,5 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js"></script>  
         <script type="text/javascript" src="assets/bundle.js"></script>
-        <!-- <script type="text/javascript" src="assets/canvas-nest.js"></script> -->
     </body>
 </html>
