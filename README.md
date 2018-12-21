@@ -6,6 +6,8 @@ Demo application is deployed on AWS EC2. Please check it out: https://aboutraine
 
 ## Features
 * Mobile-friendly.
+<br>![cover](https://imgur.com/uhSrgPS.jpg)
+<br>![javascript](https://imgur.com/960TxuI.jpg)
 
 ## Tech/framework used
 - #### CSS
@@ -18,4 +20,4 @@ Demo application is deployed on AWS EC2. Please check it out: https://aboutraine
   - [postcss](https://github.com/postcss/postcss)
   
 ## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License.
