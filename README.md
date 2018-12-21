@@ -10,8 +10,10 @@ Demo application is deployed on AWS EC2. Please check it out: https://aboutraine
 ## Tech/framework used
 - #### CSS
   - [Bootstrap](https://github.com/twbs/bootstrap)
-- #### D3.js
+- #### JS
+  - [fullPage.js](https://github.com/alvarotrigo/fullPage.js/)
   - [D3](https://github.com/d3/d3)
+  - [rellax](https://github.com/dixonandmoe/rellax)
 - #### webpack
   - [postcss](https://github.com/postcss/postcss)
   
