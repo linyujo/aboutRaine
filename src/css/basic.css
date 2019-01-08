@@ -64,6 +64,13 @@ ul{
     list-style: none;
 }
 
+.detail-ul{
+    list-style: disc;
+    list-style-position: outside;
+    margin-left: 1em;
+    font-weight: 500;
+}
+
 /* --------------
 * Fonts
 * -------------- */
@@ -131,6 +138,7 @@ p{
 
 .info-desc{
     font-size: 16px;
+    font-weight: 500;
     line-height: 32px;
 }
 
@@ -220,7 +228,7 @@ p{
     transition: all 0.3s;
 }
 
-.icon-btn:hover{
+.iconGroup .icon-btn:hover{
     transform: translateY(-20%);
 }
 

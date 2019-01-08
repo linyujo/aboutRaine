@@ -53,6 +53,10 @@
     padding: 16px;
 }
 
+.cover-desc--wrapper ul li{
+    padding-bottom: 8px;
+}
+
 .cover-desc{
     margin-top: -8px;
 }

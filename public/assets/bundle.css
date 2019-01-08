@@ -747,6 +747,13 @@ ul{
     list-style: none;
 }
 
+.detail-ul{
+    list-style: disc;
+    list-style-position: outside;
+    margin-left: 1em;
+    font-weight: 500;
+}
+
 /* --------------
 * Fonts
 * -------------- */
@@ -813,6 +820,7 @@ p{
 
 .info-desc{
     font-size: 16px;
+    font-weight: 500;
     line-height: 32px;
 }
 
@@ -902,7 +910,7 @@ p{
     transition: all 0.3s;
 }
 
-.icon-btn:hover{
+.iconGroup .icon-btn:hover{
     -webkit-transform: translateY(-20%);
             transform: translateY(-20%);
 }
@@ -1346,6 +1354,10 @@ p{
 .cover-desc--wrapper{
     background-color: rgba(214, 214, 214, 0.5);
     padding: 16px;
+}
+
+.cover-desc--wrapper ul li{
+    padding-bottom: 8px;
 }
 
 .cover-desc{
