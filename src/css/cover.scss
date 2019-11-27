@@ -1,0 +1,277 @@
+// 天空漸層
+$sceneGradient: linear-gradient(#1D2B49,#1A45A0,#91cdff,#fff);
+
+// 窗框顏色
+$windowColor: #d4c29f;
+$windowShadowColor: #dddcdb;
+
+// 貓咪顏色
+$catBodyColor: #1c0526;
+
+@mixin size($width, $height: $width, $bdrs: 0) {
+    width: $width;
+    height: $height;
+    border-radius: $bdrs;
+}
+
+// animations
+@keyframes falling{
+    0%{
+        opacity: 0;
+        transform: translate(200px, 0px);
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(100px, 100px);
+    }
+}
+
+@keyframes cat-head{
+    0%, 20%, 50%, 100%{
+        transform: scaleY(1);
+    }
+    21%, 45%{
+        transform: scaleY(0.85) translateY(2px);
+    }
+}
+
+@keyframes ear-right {
+    0%, 20%, 50%, 100% {
+      transform: rotate(60deg);
+    }
+    21%, 45% {
+      transform: rotate(80deg);
+    }
+}
+
+@keyframes ear-left {
+    0%, 20%, 50%, 100% {
+      transform: rotate(45deg);
+    }
+    21%, 45% {
+      transform: rotate(25deg);
+    }
+}
+
+/* --------------
+* background
+* -------------- */
+/* .cover--bg-covered{
+    background-image: url('../images/cover2.jpg');
+	background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+    .cover--bg-covered{
+        background-position: right -272px bottom;
+    }
+}
+@media (max-width: 576px) {
+    .cover--bg-covered{
+        background-position: right -224px bottom;
+    }
+}
+
+.cover--bg-covered::before{
+    content: "";
+    position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+} */
+
+// .cover--bg-covered{
+//     background: $sceneGradient;
+// }
+.catScene-wrapper{
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.catScene{
+    width: 400px;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 128px;
+    * {
+        position: absolute;
+    }
+    .window-group{
+        width: 100%;
+        height: 100%;
+        .window{
+            width: 100%;
+            height: 100%;
+            border: 10px solid $windowColor;     
+            border-radius: 3px;
+            .sky{
+                width: 100%;
+                height: 100%;
+                background: $sceneGradient;
+                background-size: 100% 300%;
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 14px;
+                top: 40%;
+                background-color: $windowColor;
+                box-shadow: 0 -5px $windowShadowColor;
+                z-index: 3;
+            }
+            .window-in{
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 6px solid $windowShadowColor;
+                border-top: 0;
+                overflow: hidden;
+            }
+            .stars{
+                @include size(100%);
+                top: 0;
+                left: 0;
+                [class^='star']{
+                    @include size(3px, 3px, 50%);
+                    background-color: #fff;
+                    animation: falling 2s infinite;
+                }
+                @for $i from 1 through 30{
+                    .star#{$i}{
+                        top: random(100)*1%;
+                        left: random(80)*-1% + 50%;
+                        animation-delay: $i*-0.1s;
+                    }
+                }
+            }
+        }
+        .cat{
+            width: 50%;
+            height: 50%;
+            right: 20px;
+            bottom: 8px;
+            border: 1px solid red;
+            position: absolute;
+            z-index: 4;
+            .cat-head{
+                width: 70px;
+                height: 60px;
+                background-color: $catBodyColor;
+                border-radius: 18px;
+                top: 30px;
+                left: 18px;
+                transform: rotate(3deg);
+                // animation: cat-head 15s ease infinite;
+                .ear{
+                    width: 24px;
+                    height: 22px;
+                    top: -5px;
+                    left: -1px;
+                    transform: rotate(45deg);
+                    // animation: ear-left 15s ease infinite;
+                    .ear-in{
+                        width: 100%;
+                        height: 100%;
+                        background-color: $catBodyColor;
+                        transform: skew(35deg);
+                        border-radius: 5px;
+                        overflow: hidden;
+                    }
+                    &:nth-child(2){
+                        left: 43px;
+                        top: -7px;
+                        transform: rotate(78deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .catScene{
+        right: 0;
+        margin-right: 0;
+    }   
+}
+
+/* --------------
+* h1 heading
+* -------------- */
+@media (max-width: 768px) {
+    .cover .heading{
+        font-size: 48px;
+        margin-bottom: 240px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cover .heading{
+        margin-bottom: 0;
+    }
+}
+
+/* --------------
+* cover-desc
+* -------------- */
+.cover-desc--wrapper{
+    background-color: rgba(214, 214, 214, 0.5);
+    padding: 16px;
+}
+
+.cover-desc--wrapper ul li{
+    padding-bottom: 8px;
+}
+
+.cover-desc{
+    margin-top: -8px;
+}
+@media (max-width: 576px) {
+    .cover-desc--wrapper{
+        display: none;
+    }
+}
+
+/* --------------
+* scrolldown-btn
+* -------------- */
+.scrolldown-btn{
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    border: 1px solid #fefefe;
+    color: #fefefe;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: breath 2s infinite;
+}
+@keyframes breath{
+    0%{opacity: 0.5;}
+    50%{opacity: 1;}
+    100%{opacity: 0.5;}
+}
+
+.scrolldown-btn .icon-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

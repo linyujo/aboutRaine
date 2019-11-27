@@ -23,7 +23,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
+                test: /\.(sa|sc|c)ss$/,
                 exclude: /node_modules/,
                 // use: ["style-loader", "css-loader", "postcss-loader"]
                 /**
@@ -42,9 +42,20 @@ module.exports = {
                         loader: 'css-loader',
                         options: { url: false }
                     },
-                    'postcss-loader'
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: function () {
+                                return [
+                                    require('autoprefixer'),
+                                    require('cssnano')({preset: ['default', {discardComments: {removeAll: true}}]})
+                                ];
+                            }
+                        }
+                    },
+                    'sass-loader'
                 ]
-            }
+            },
         ]
     },
     plugins: [
@@ -54,5 +65,5 @@ module.exports = {
             filename: "bundle.css",
             // chunkFilename: "[id].css"
         }),
-    ]
+    ],
 };
