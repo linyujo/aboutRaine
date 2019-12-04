@@ -129,7 +129,7 @@ $catBodyColor: #1c0526;
                 height: 14px;
                 top: 40%;
                 background-color: $windowColor;
-                box-shadow: 0 -5px $windowShadowColor;
+                box-shadow: 0 -10px $windowShadowColor;
                 z-index: 3;
             }
             .window-in{
@@ -137,7 +137,7 @@ $catBodyColor: #1c0526;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                border: 6px solid $windowShadowColor;
+                border: 10px solid $windowShadowColor;
                 border-top: 0;
                 overflow: hidden;
             }
@@ -168,19 +168,19 @@ $catBodyColor: #1c0526;
             position: absolute;
             z-index: 4;
             .cat-head{
-                width: 70px;
-                height: 60px;
+                width: 100px;
+                height: 90px;
                 background-color: $catBodyColor;
-                border-radius: 18px;
-                top: 30px;
-                left: 18px;
+                border-radius: 36px;
+                top: 60px;
+                left: 7px;
                 transform: rotate(3deg);
                 // animation: cat-head 15s ease infinite;
                 .ear{
-                    width: 24px;
-                    height: 22px;
-                    top: -5px;
-                    left: -1px;
+                    width: 38px;
+                    height: 36px;
+                    top: -6px;
+                    left: 2px;
                     transform: rotate(45deg);
                     // animation: ear-left 15s ease infinite;
                     .ear-in{
@@ -192,9 +192,66 @@ $catBodyColor: #1c0526;
                         overflow: hidden;
                     }
                     &:nth-child(2){
-                        left: 43px;
-                        top: -7px;
-                        transform: rotate(78deg);
+                        left: 56px;
+                        top: -5px;
+                        transform: rotate(72deg);
+                    }
+                }
+            }
+            .cat-neck{
+                top: 110px;
+                right: 111px;
+                // transform: rotate(-13deg);
+                .neck-in{
+                    bottom: 2px;
+                    background-color: $catBodyColor;
+                    height: 16px;
+                    width: 20px;
+                    border-radius: 0 0px 20px 20px;
+                    z-index: 1;
+                    transform: rotate(-6deg);
+                    .neck-in{
+                        bottom: -29%;
+                    }
+                }
+            }
+            .cat-body{
+                width: 150px;
+                height: 180px;
+                background-color: $catBodyColor;
+                bottom: 0;
+                border-radius: 0 50% 6% 0;
+                left: 34px;
+            }
+            .cat-paw{
+                bottom: 0;
+                background-color: $catBodyColor;
+                width: 30px;
+                height: 18px;
+                border-radius: 50px;
+                left: 18px;
+            }
+            .cat-tail{
+                background-color: $catBodyColor;
+                height: 40px;
+                width: 18px;
+                border-radius: 50px;
+                bottom: -24px;
+                right: 10px;
+                .tail-in{
+                    bottom: 2px;
+                    background-color: $catBodyColor;
+                    height: 12px;
+                    width: 18px;
+                    border-radius: 20px 20px 0 0px;
+                    z-index: 1;
+                    transform: rotate(8deg);
+                    transform-origin: center center;
+                    .tail-in{
+                        bottom: -40%;
+                    }
+                    &.last{
+                        border-radius: 20px;
                     }
                 }
             }
