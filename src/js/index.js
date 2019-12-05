@@ -24,7 +24,7 @@ function fullPageInit () {
         // options here
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
         anchors:['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7'],
-        sectionsColor: ['#f7f8f9', '#ffffff', '#f6f9fc', '#ffffff', '#bbd3e5', '#f5f3f4', '#ffffff'],
+        // sectionsColor: ['#f7f8f9', '#ffffff', '#f6f9fc', '#ffffff', '#bbd3e5', '#f5f3f4', '#ffffff'],
         menu: '#nav-right-id',
         autoScrolling: false,
 		fitToSection: false,
@@ -65,11 +65,22 @@ function handleScroll () {
     });
 };
 
+function handleWindowClick(){
+    const sky = $("#window-sky");
+    const cover = $(".cover-bg");
+    $("#window-group").click(function(){
+        sky.toggleClass('day');
+        cover.toggleClass('cover-bg_day');
+    });
+}
+
 $(document).ready(function() {
 
     fullPageInit();
     
     handleScroll();
+
+    handleWindowClick();
 
     if ($(window).width() > 767) {
         // rellax init

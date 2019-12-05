@@ -1,3 +1,8 @@
+// 白天背景
+$coverBgNight: linear-gradient(180deg, #211f1f 0%, #2948a6 75%, #120c47 100%);
+$coverBgDay: linear-gradient(0deg, rgba(251,255,255,1) 0%, rgba(205,232,255,1) 100%);
+$coverBg: linear-gradient(90deg, rgba(33,31,31,1) 0%, rgba(41,72,166,1) 38%, rgba(18,12,71,1) 50%, rgba(251,255,255,1) 51%, rgba(205,232,255,1) 96%, rgba(205,232,255,1) 99%);
+
 // 天空漸層
 $sceneGradient: linear-gradient(#1D2B49,#1A45A0,#91cdff,#fff);
 
@@ -8,6 +13,10 @@ $windowShadowColor: #dddcdb;
 // 貓咪顏色
 $catBodyColor: #1c0526;
 
+// 太陽顏色
+$sunColor: #ffdd38;
+$sunShadowColor: rgba(255, 221, 56, 0.5);
+
 @mixin size($width, $height: $width, $bdrs: 0) {
     width: $width;
     height: $height;
@@ -15,7 +24,16 @@ $catBodyColor: #1c0526;
 }
 
 // animations
-@keyframes falling{
+@keyframes moonAppear{
+    0% {
+        box-shadow: inset 0px 0px rgba(255, 255, 255, 0.9);
+    }
+    100%{
+        box-shadow: inset 10px -10px rgba(255, 255, 255, 0.9);
+    }
+}
+
+@keyframes starFalling{
     0%{
         opacity: 0;
         transform: translate(200px, 0px);
@@ -33,26 +51,35 @@ $catBodyColor: #1c0526;
     0%, 20%, 50%, 100%{
         transform: scaleY(1);
     }
-    21%, 45%{
+    25%, 47%{
         transform: scaleY(0.85) translateY(2px);
     }
 }
 
 @keyframes ear-right {
     0%, 20%, 50%, 100% {
-      transform: rotate(60deg);
+        transform: rotate(60deg);
     }
     21%, 45% {
-      transform: rotate(80deg);
+        transform: rotate(80deg);
     }
 }
 
 @keyframes ear-left {
     0%, 20%, 50%, 100% {
-      transform: rotate(45deg);
+        transform: rotate(45deg);
     }
     21%, 45% {
-      transform: rotate(25deg);
+        transform: rotate(25deg);
+    }
+}
+
+@keyframes tail {
+    0%, 20%, 75%, 100% {
+        transform: rotate(-8deg);
+    }
+    10%, 55%, 85%{
+        transform: rotate(8deg);
     }
 }
 
@@ -88,6 +115,15 @@ $catBodyColor: #1c0526;
 // .cover--bg-covered{
 //     background: $sceneGradient;
 // }
+.cover-bg{
+    background: $coverBg;
+    background-size: 100% 200%; // $coverBgNight;
+    transition: background 2s ease;
+    // &.cover-bg_day{
+    //     // background: white; // $coverBgDay;
+    // }
+}
+
 .catScene-wrapper{
     width: 100%;
     max-width: 1200px;
@@ -96,6 +132,7 @@ $catBodyColor: #1c0526;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 3;
 }
 .catScene{
     width: 400px;
@@ -121,6 +158,38 @@ $catBodyColor: #1c0526;
                 height: 100%;
                 background: $sceneGradient;
                 background-size: 100% 300%;
+                .sun, .moon{
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    top: 80px;
+                    left: 50%;
+                    // border: 1px solid palevioletred;
+                }
+                .sun{
+                    background-color: $sunColor;
+                    box-shadow: 0 0 20px $sunShadowColor;
+                    top: 400px;
+                    opacity: 0;
+                }
+                .moon{
+                    animation: moonAppear 5s both;
+                    opacity: 1;
+                }
+                &.day{
+                    background-position: 0 100%;
+                    .sun{
+                        top: 80px;
+                        opacity: 1;
+                    }
+                    .moon{
+                        top: -80px;
+                        opacity: 0;
+                    }
+                    .stars{
+                        opacity: 0;   
+                    }
+                }
             }
             &:before{
                 content: "";
@@ -148,7 +217,7 @@ $catBodyColor: #1c0526;
                 [class^='star']{
                     @include size(3px, 3px, 50%);
                     background-color: #fff;
-                    animation: falling 2s infinite;
+                    animation: starFalling 2s infinite;
                 }
                 @for $i from 1 through 30{
                     .star#{$i}{
@@ -164,7 +233,7 @@ $catBodyColor: #1c0526;
             height: 50%;
             right: 20px;
             bottom: 8px;
-            border: 1px solid red;
+            // border: 1px solid red;
             position: absolute;
             z-index: 4;
             .cat-head{
@@ -174,15 +243,14 @@ $catBodyColor: #1c0526;
                 border-radius: 36px;
                 top: 60px;
                 left: 7px;
-                transform: rotate(3deg);
-                // animation: cat-head 15s ease infinite;
+                transform: rotate(3deg) scale(1.05);
+                animation: cat-head 15s ease infinite;
                 .ear{
-                    width: 38px;
-                    height: 36px;
-                    top: -6px;
-                    left: 2px;
+                    width: 48px;
+                    height: 46px;
+                    top: -2px;
+                    left: 1px;
                     transform: rotate(45deg);
-                    // animation: ear-left 15s ease infinite;
                     .ear-in{
                         width: 100%;
                         height: 100%;
@@ -191,10 +259,14 @@ $catBodyColor: #1c0526;
                         border-radius: 5px;
                         overflow: hidden;
                     }
+                    &:first-child{
+                        animation: ear-left 5s ease infinite;
+                    }
                     &:nth-child(2){
-                        left: 56px;
-                        top: -5px;
+                        left: 50px;
+                        top: 1px;
                         transform: rotate(72deg);
+                        animation: ear-right 5s ease infinite;
                     }
                 }
             }
@@ -234,19 +306,20 @@ $catBodyColor: #1c0526;
             .cat-tail{
                 background-color: $catBodyColor;
                 height: 40px;
-                width: 18px;
+                width: 20px;
                 border-radius: 50px;
                 bottom: -24px;
                 right: 10px;
                 .tail-in{
                     bottom: 2px;
                     background-color: $catBodyColor;
-                    height: 12px;
-                    width: 18px;
+                    height: 20px;
+                    width: 20px;
                     border-radius: 20px 20px 0 0px;
                     z-index: 1;
                     transform: rotate(8deg);
                     transform-origin: center center;
+                    animation: tail 15s ease infinite;
                     .tail-in{
                         bottom: -40%;
                     }
@@ -257,6 +330,10 @@ $catBodyColor: #1c0526;
             }
         }
     }
+}
+
+.moon, .sun, .scene, .stars{
+    transition: 2s;
 }
 
 
