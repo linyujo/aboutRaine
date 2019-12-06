@@ -1,7 +1,6 @@
 // 白天背景
-$coverBgNight: linear-gradient(180deg, #211f1f 0%, #2948a6 75%, #120c47 100%);
-$coverBgDay: linear-gradient(0deg, rgba(251,255,255,1) 0%, rgba(205,232,255,1) 100%);
-$coverBg: linear-gradient(90deg, rgba(33,31,31,1) 0%, rgba(41,72,166,1) 38%, rgba(18,12,71,1) 50%, rgba(251,255,255,1) 51%, rgba(205,232,255,1) 96%, rgba(205,232,255,1) 99%);
+$coverBgNight: linear-gradient(82deg, rgba(33,31,31,0.8981967787114846) 0%, rgba(41,72,166,0.7693452380952381) 75%, rgba(18,12,71,0.8729866946778712) 100%);
+$coverBg: linear-gradient(180deg, rgba(29,43,73,1) 0%, rgba(26,70,163,1) 25%, rgba(115,218,255,1) 50%, rgba(237,250,255,1) 70%);
 
 // 天空漸層
 $sceneGradient: linear-gradient(#1D2B49,#1A45A0,#91cdff,#fff);
@@ -116,12 +115,24 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
 //     background: $sceneGradient;
 // }
 .cover-bg{
-    background: $coverBg;
-    background-size: 100% 200%; // $coverBgNight;
-    transition: background 2s ease;
-    // &.cover-bg_day{
-    //     // background: white; // $coverBgDay;
-    // }
+    background: $sceneGradient;
+    background-size: 100% 300%; // $coverBgNight;
+    background-position: top;
+    &:before{
+        content: "";
+        background: $coverBgNight;
+        transition: 2s;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    &.cover-bg_day{
+        background-position: bottom;
+        &:before{
+            // background: none;
+            content: none;
+        }
+    }
 }
 
 .catScene-wrapper{
@@ -332,7 +343,7 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
     }
 }
 
-.moon, .sun, .scene, .stars{
+.cover-bg, .sky, .moon, .sun, .stars{
     transition: 2s;
 }
 
