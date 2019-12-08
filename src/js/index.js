@@ -57,10 +57,13 @@ function handleScroll () {
         let scrollDistance = $(window).scrollTop();
         // console.log('scrollDistance',scrollDistance);
         const header = $("#header");
+        const navRight = $("#nav-right-id");
         if (scrollDistance > 80) {
             header.addClass("header-scrolling");
+            navRight.addClass("header-scrolling");
         } else {
-            header.removeClass("header-scrolling")
+            header.removeClass("header-scrolling");
+            navRight.removeClass("header-scrolling");
         }
     });
 };

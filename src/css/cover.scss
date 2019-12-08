@@ -138,6 +138,7 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
     .window-group{
         width: 100%;
         height: 100%;
+        cursor: pointer;
         .window{
             width: 100%;
             height: 100%;
@@ -371,18 +372,24 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
 * cover-desc
 * -------------- */
 .cover-desc--wrapper{
-    background-color: rgba(214, 214, 214, 0.5);
     padding: 16px;
+    opacity: 0;
+    transition: 2s;
+    .cover-desc{
+        margin-top: -8px;
+    }
+    ul li{
+        padding-bottom: 8px;
+    }
 }
 
-.cover-desc--wrapper ul li{
-    padding-bottom: 8px;
+.cover-bg_day{
+    .cover-desc--wrapper{
+        opacity: 1;
+    }
 }
 
-.cover-desc{
-    margin-top: -8px;
-}
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .cover-desc--wrapper{
         display: none;
     }

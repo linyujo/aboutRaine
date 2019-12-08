@@ -1,3 +1,7 @@
+#id-slide4{
+    background: linear-gradient(180deg, rgba(228,202,207,0.4) 0%, rgba(106,197,213,0.2) 100%);
+}
+
 #js-svg-wrapper {
     position: absolute;
     top: 0;

@@ -58,7 +58,7 @@ export default function jsTreeInit () {
 
     const xScale = d3.scaleLinear().domain([0,5]).range([0, barChartWidth]);
 
-    const firstEndNodeId = "ES5";
+    const firstEndNodeId = "ES6+";
 
     const arrangeData = (data) => {
         if (data.skill === "JavaScript") {

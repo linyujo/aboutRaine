@@ -1,6 +1,6 @@
 skill,detail,score,color
 "CSS",
-"basic of CSS","box-sizing, position, display, horizontal/vertical center, image, background, basic animation...","3","#808080",
-"layout","float, flexbox, bootstrap","2.5","#2E2575",
-"RWD","viewport, media-query...","2","#E54F24",
-"Architecture","BEM","2","#FF9900"
+"basic of CSS","box-sizing, position, display, float, flexbox, image, background, basic animation...","4","#808080",
+"CSS preprocessor","SCSS, CSS module","4","#FF9900",
+"UI frameworks","bootstrap, Ant.Design","3","#2E2575",
+"RWD","viewport, media-query...","3","#E54F24",
