@@ -12,6 +12,10 @@
         transform: translateX(-50%);
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
     }
+    .timeline-cards{
+        margin-left: 32px;
+        margin-right: 32px;
+    }
     .timeline-card{
         &:before{
             content: "";
@@ -119,7 +123,7 @@
     .timeline-group{
         margin-top: 60px;
         .timeline{
-            left: 0;
+            left: 32px;
         }
         .timeline-card{
             width: calc(100% - 24px);
@@ -137,6 +141,10 @@
             ::before{
                 left: -24px;
                 transform: translate(-50%,-50%);
+            }
+            .timeline-card__icon{
+                right: -32px;
+                left: unset;
             }
         }
     }

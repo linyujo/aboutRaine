@@ -46,10 +46,9 @@
 
         <div id="fullpage">
 
-            <div id="id-slide1" class="section cover-bg cover--bg-covered" data-anchor="slide1">
+            <div id="id-slide1" class="section cover cover-bg cover--bg-covered" data-anchor="slide1">
                 <div class="catScene-wrapper">
                     <div class="catScene">
-                        <!-- <div class="window-group"></div> -->
                         <div class="window-group" id="window-group">
                             <div class="window">
                                 <div class="sky" id="window-sky">
@@ -125,29 +124,29 @@
                                 <div class="cat-body"></div>
                                 <div class="cat-paw"></div>
                                 <div class="cat-tail">
-                                   <div class="tail-in">
-                                       <div class="tail-in">
-                                           <div class="tail-in">
-                                               <div class="tail-in">
-                                                   <div class="tail-in">
-                                                       <div class="tail-in">
-                                                           <div class="tail-in">
-                                                               <div class="tail-in">
-                                                                   <div class="tail-in">
+                                    <div class="tail-in">
+                                        <div class="tail-in">
+                                            <div class="tail-in">
+                                                <div class="tail-in">
+                                                    <div class="tail-in">
+                                                        <div class="tail-in">
+                                                            <div class="tail-in">
+                                                                <div class="tail-in">
+                                                                    <div class="tail-in">
                                                                         <div class="tail-in">
                                                                             <div class="tail-in">
                                                                                 <div class="tail-in last"></div>
                                                                             </div>
                                                                         </div>
-                                                                   </div>
-                                                               </div>
-                                                           </div>
-                                                       </div>
-                                                   </div>
-                                               </div>
-                                           </div>
-                                       </div>
-                                   </div> 
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -181,8 +180,6 @@
             </div>
 
             <div id="id-slide2" class="section experience" data-anchor="slide2">
-                <!-- <img src="/images/geometry/circle_blue.png" alt="" class="geometry-01 rellax" data-rellax-speed="1"> -->
-                <!-- <img src="/images/geometry/triangle_green.png" alt="" class="geometry-02 rellax" data-rellax-speed="1"> -->
                 <div class="section__inner">
                     <div class="container">
                         <div class="row">
@@ -201,10 +198,12 @@
                                                     <div class="timeline-card__lableGroup">
                                                         <label>Position:</label><span>frontend developer</span>
                                                         <br>
-                                                        <label>Engineered:</label><span>Developed Corporate identity website</span>
+                                                        <label>Engineered:</label><span>Developed Corporate identity
+                                                            website</span>
                                                     </div>
                                                     <ul>
-                                                        <li>Cooperated with UI/UX designer to convert static layout into responsive website.</li>
+                                                        <li>Cooperated with UI/UX designer to convert static layout
+                                                            into responsive website.</li>
                                                         <li>Built dynamic website with PHP Engineer.</li>
                                                     </ul>
                                                 </div>
@@ -224,16 +223,20 @@
                                                         <label>Engineered:</label><span>Content Management System</span>
                                                     </div>
                                                     <ul>
-                                                        <li>Maintained content management system includes form and charts.</li>
+                                                        <li>Maintained content management system includes form and
+                                                            charts.</li>
                                                         <li>Created dynamic data graph with Chart.js.</li>
                                                     </ul>
                                                     <div class="timeline-card__lableGroup">
                                                         <label>Position:</label><span>software developer</span>
                                                         <br>
-                                                        <label>Engineered:</label><span>Implementing IBM solutions to the client, particularly in ERP system</span>
+                                                        <label>Engineered:</label><span>Implementing IBM solutions to
+                                                            the client, particularly in ERP system</span>
                                                     </div>
                                                     <ul>
-                                                        <li>Created scripts to rewrite duplicate codes among different files. The scripts reduced almost 50% of time compared with manual modification to get the same result.</li>
+                                                        <li>Created scripts to rewrite duplicate codes among different
+                                                            files. The scripts reduced almost 50% of time compared with
+                                                            manual modification to get the same result.</li>
                                                     </ul>
                                                 </div>
                                                 <div class="timeline-card__icon">
@@ -249,10 +252,12 @@
                                                     <div class="timeline-card__lableGroup">
                                                         <label>Position:</label><span>frontend developer</span>
                                                         <br>
-                                                        <label>Engineered:</label><span>Developed the Business Cloud Service Solution</span>
+                                                        <label>Engineered:</label><span>Developed the Business Cloud
+                                                            Service Solution</span>
                                                     </div>
                                                     <ul>
-                                                        <li>Cooperated with back-end developers and UX designer to build reusable and maintainable components.</li>
+                                                        <li>Cooperated with back-end developers and UX designer to
+                                                            build reusable and maintainable components.</li>
                                                         <li>Ensured the technical feasibility of UI/UX designs.</li>
                                                         <li>Determined the structure of web pages.</li>
                                                         <li>Ensured the website was optimized for pc and ipad.</li>
@@ -476,6 +481,20 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js"></script>
     <script type="text/javascript" src="assets/bundle.js"></script>
+    <script>
+        (function (d) {
+            var w = d.documentElement.offsetWidth,
+                t = d.createTreeWalker(d.body, NodeFilter.SHOW_ELEMENT),
+                b;
+            while (t.nextNode()) {
+                b = t.currentNode.getBoundingClientRect();
+                if (b.right > w || b.left < 0) {
+                    t.currentNode.style.setProperty('outline', '1px dotted red', 'important');
+                    console.log(t.currentNode);
+                }
+            };
+        }(document));
+    </script>
 </body>
 
 </html>

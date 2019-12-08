@@ -1,8 +1,8 @@
 // css
 import '../css/grid.css';
 import '../css/basic.css';
-import '../css/navRight.css';
-import '../css/header.css';
+import '../css/navRight.scss';
+import '../css/header.scss';
 import '../css/cover.scss';
 import '../css/experience.scss';
 import '../css/treeStyle.css';
@@ -68,9 +68,13 @@ function handleScroll () {
 function handleWindowClick(){
     const sky = $("#window-sky");
     const cover = $(".cover-bg");
+    const navRight = $("#nav-right-id");
+    const header = $("#header");
     $("#window-group").click(function(){
         sky.toggleClass('day');
         cover.toggleClass('cover-bg_day');
+        navRight.toggleClass('cover-bg_day');
+        header.toggleClass('cover-bg_day');
     });
 }
 

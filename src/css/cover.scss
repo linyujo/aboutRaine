@@ -1,5 +1,6 @@
 // 白天背景
-$coverBgNight: linear-gradient(82deg, rgba(33,31,31,0.8981967787114846) 0%, rgba(41,72,166,0.7693452380952381) 75%, rgba(18,12,71,0.8729866946778712) 100%);
+$coverNightFilter: linear-gradient(82deg, #211f1f 0%, #2948a6 75%, #120c47 100%);
+$coverDayFilter: linear-gradient(82deg, rgba(145,205,255,1) 0%, rgba(255,255,255,1) 75%, rgba(145,205,255,1) 100%);
 $coverBg: linear-gradient(180deg, rgba(29,43,73,1) 0%, rgba(26,70,163,1) 25%, rgba(115,218,255,1) 50%, rgba(237,250,255,1) 70%);
 
 // 天空漸層
@@ -23,6 +24,16 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
 }
 
 // animations
+
+@keyframes coverDayNightSwitch{
+    0%{
+        background: $coverNightFilter;
+    }
+    100%{
+        background: $coverDayFilter;
+    }
+}
+
 @keyframes moonAppear{
     0% {
         box-shadow: inset 0px 0px rgba(255, 255, 255, 0.9);
@@ -82,55 +93,23 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
     }
 }
 
-/* --------------
-* background
-* -------------- */
-/* .cover--bg-covered{
-    background-image: url('../images/cover2.jpg');
-	background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-}
-@media (max-width: 768px) {
-    .cover--bg-covered{
-        background-position: right -272px bottom;
-    }
-}
-@media (max-width: 576px) {
-    .cover--bg-covered{
-        background-position: right -224px bottom;
-    }
-}
-
-.cover--bg-covered::before{
-    content: "";
-    position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-} */
-
-// .cover--bg-covered{
-//     background: $sceneGradient;
-// }
 .cover-bg{
     background: $sceneGradient;
-    background-size: 100% 300%; // $coverBgNight;
+    background-size: 100% 300%;
     background-position: top;
     &:before{
         content: "";
-        background: $coverBgNight;
-        transition: 2s;
         position: absolute;
         width: 100%;
         height: 100%;
+        transition: 2s;
+        background: linear-gradient(82deg, #211f1f 0%, #2948a6 75%, #120c47 100%);
+        opacity: 1;
     }
     &.cover-bg_day{
         background-position: bottom;
         &:before{
-            // background: none;
-            content: none;
+            opacity: 0;
         }
     }
 }
@@ -242,7 +221,7 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
         .cat{
             width: 50%;
             height: 50%;
-            right: 20px;
+            right: 56px;
             bottom: 8px;
             // border: 1px solid red;
             position: absolute;
@@ -252,7 +231,7 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
                 height: 90px;
                 background-color: $catBodyColor;
                 border-radius: 36px;
-                top: 60px;
+                bottom: 162px;
                 left: 7px;
                 transform: rotate(3deg) scale(1.05);
                 animation: cat-head 15s ease infinite;
@@ -278,17 +257,18 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
                         top: 1px;
                         transform: rotate(72deg);
                         animation: ear-right 5s ease infinite;
+
                     }
                 }
             }
             .cat-neck{
-                top: 110px;
-                right: 111px;
+                right: 114px;
+                bottom: 203px;
                 // transform: rotate(-13deg);
                 .neck-in{
                     bottom: 2px;
                     background-color: $catBodyColor;
-                    height: 16px;
+                    height: 19px;
                     width: 20px;
                     border-radius: 0 0px 20px 20px;
                     z-index: 1;
@@ -347,18 +327,33 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
     transition: 2s;
 }
 
-
+@media (max-width: 960px) {
+    .catScene{
+        margin-right: 56px;
+    }
+}
 
 @media (max-width: 768px) {
     .catScene{
         right: 0;
-        margin-right: 0;
-    }   
+        margin-right: 12px;
+    }
 }
 
 /* --------------
 * h1 heading
 * -------------- */
+.cover{
+    .heading{
+        color: #fefefe;
+        transition: 2s;
+    }
+    &.cover-bg_day{
+        .heading{
+            color: #484848;
+        }
+    }
+}
 @media (max-width: 768px) {
     .cover .heading{
         font-size: 48px;
