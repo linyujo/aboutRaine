@@ -35,5 +35,5 @@ var server = http.createServer(app);
 var PORT = 3000;
 
 server.listen(PORT, function() { 
-    console.log("已啟動server")
+    console.log("已啟動server port 3000")
 });

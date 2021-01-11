@@ -114,6 +114,12 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
     }
 }
 
+.cover{
+	.section__inner{
+		z-index: 3;
+	}
+}
+
 .catScene-wrapper{
     width: 100%;
     max-width: 1200px;
@@ -406,7 +412,8 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
     color: #fefefe;
     position: absolute;
     bottom: 24px;
-    left: 50%;
+		left: 50%;
+		z-index: 5;
     transform: translateX(-50%);
     animation: breath 2s infinite;
 }

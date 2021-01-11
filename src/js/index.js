@@ -1,5 +1,6 @@
 // css
 import '../css/grid.css';
+import '../css/animate.css';
 import '../css/basic.css';
 import '../css/navRight.scss';
 import '../css/header.scss';
@@ -9,8 +10,8 @@ import '../css/treeStyle.css';
 import '../css/html_css.css';
 import '../css/jsSkill.css';
 import '../css/backendSkill.css';
-import '../css/careerPlan.css';
-import '../css/contact.css';
+import '../css/sideProjects.scss';
+import '../css/careerGoal.scss';
 import '../css/footer.css';
 
 // js
@@ -93,6 +94,8 @@ $(document).ready(function() {
         // rellax init
         let rellax = new Rellax('.rellax', {
             center: true,
-        });
+				});
+				// WOW init
+				new WOW().init();
     }
 });
