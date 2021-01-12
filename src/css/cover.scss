@@ -7,8 +7,8 @@ $coverBg: linear-gradient(180deg, rgba(29,43,73,1) 0%, rgba(26,70,163,1) 25%, rg
 $sceneGradient: linear-gradient(#1D2B49,#1A45A0,#91cdff,#fff);
 
 // 窗框顏色
-$windowColor: #d4c29f;
-$windowShadowColor: #dddcdb;
+$windowColor: #5d432c;
+$windowShadowColor: #9e9892;
 
 // 貓咪顏色
 $catBodyColor: #1c0526;
@@ -18,43 +18,43 @@ $sunColor: #ffdd38;
 $sunShadowColor: rgba(255, 221, 56, 0.5);
 
 @mixin size($width, $height: $width, $bdrs: 0) {
-    width: $width;
-    height: $height;
-    border-radius: $bdrs;
+	width: $width;
+	height: $height;
+	border-radius: $bdrs;
 }
 
 // animations
 
 @keyframes coverDayNightSwitch{
-    0%{
-        background: $coverNightFilter;
-    }
-    100%{
-        background: $coverDayFilter;
-    }
+	0%{
+			background: $coverNightFilter;
+	}
+	100%{
+			background: $coverDayFilter;
+	}
 }
 
 @keyframes moonAppear{
-    0% {
-        box-shadow: inset 0px 0px rgba(255, 255, 255, 0.9);
-    }
-    100%{
-        box-shadow: inset 10px -10px rgba(255, 255, 255, 0.9);
-    }
+	0% {
+		box-shadow: inset 0px 0px rgba(255, 255, 255, 0.9);
+	}
+	100%{
+		box-shadow: inset 10px -10px rgba(255, 255, 255, 0.9);
+	}
 }
 
 @keyframes starFalling{
-    0%{
-        opacity: 0;
-        transform: translate(200px, 0px);
-    }
-    70%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-        transform: translate(100px, 100px);
-    }
+	0%{
+			opacity: 0;
+			transform: translate(200px, 0px);
+	}
+	70%{
+			opacity: 1;
+	}
+	100%{
+			opacity: 0;
+			transform: translate(100px, 100px);
+	}
 }
 
 @keyframes cat-head{
@@ -127,11 +127,12 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		overflow: hidden;
     z-index: 3;
 }
 .catScene{
-    width: 400px;
+		width: 400px;
     height: 80vh;
     position: absolute;
     top: 50%;
@@ -335,16 +336,22 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
 }
 
 @media (max-width: 960px) {
-    .catScene{
-        margin-right: 56px;
-    }
+	.catScene{
+			margin-right: 56px;
+	}
 }
 
 @media (max-width: 768px) {
-    .catScene{
-        right: 0;
-        margin-right: 12px;
-    }
+	.catScene{
+			right: 0;
+			margin-right: 12px;
+	}
+}
+
+@media (max-width: 500px) {
+	.catScene{
+		width: 300px;
+	}
 }
 
 /* --------------

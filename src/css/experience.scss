@@ -58,30 +58,30 @@
         }
     }
     &:nth-child(even){
-        display: flex;
-        justify-content: flex-end;
-        ::before{
-            left: -24px;
-            transform: translate(-50%,-50%);
-        }
-        .timeline-card__icon{
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.56);
-            position: absolute;
-            top: 0%;
-            transform: translateY(-50%);
-            right: -32px;
-            img{
-                max-width: 65%;
-                max-height: 65%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
+			display: flex;
+			justify-content: flex-end;
+			::before{
+				left: -24px;
+				transform: translate(-50%,-50%);
+			}
+			.timeline-card__icon{
+				width: 64px;
+				height: 64px;
+				border-radius: 50%;
+				box-shadow: 0 3px 10px rgba(0, 0, 0, 0.56);
+				position: absolute;
+				top: 0%;
+				transform: translateY(-50%);
+				right: -32px;
+				img{
+						max-width: 65%;
+						max-height: 65%;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+				}
+			}
     }
     .timeline-card{
         padding: 24px;
@@ -123,30 +123,46 @@
     .timeline-group{
         margin-top: 60px;
         .timeline{
-            left: 32px;
-        }
+            left: 8px;
+				}
+				.timeline-cards{
+					margin-left: 8px;
+				}
         .timeline-card{
             width: calc(100% - 24px);
-            margin-bottom: 40px;
+						margin-bottom: 40px;
+						padding: 16px;
         }
     }
     .timeline-card-row{
-        &:last-child{
-            .timeline-card{
-                margin-bottom: 0;
-            }
-        }
-        &:nth-child(odd){
-            justify-content: flex-end;
-            ::before{
-                left: -24px;
-                transform: translate(-50%,-50%);
-            }
-            .timeline-card__icon{
-                right: -32px;
-                left: unset;
-            }
-        }
+			&:last-child{
+					.timeline-card{
+							margin-bottom: 0;
+					}
+			}
+			&:nth-child(odd){
+					justify-content: flex-end;
+					::before{
+							left: -24px;
+							transform: translate(-50%,-50%);
+					}
+					.timeline-card__icon{
+							right: -32px;
+							left: unset;
+					}
+			}
+			.timeline-card{
+				display: block;
+				.timeline-card__title{
+					display: block;
+					title{
+						display: block;
+					}
+					.timeline-card__duration{
+						display: block;
+					}
+				}
+			}
     }
 }
 
