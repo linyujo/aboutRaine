@@ -145,7 +145,7 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
     .window-group{
         width: 100%;
         height: 100%;
-        cursor: pointer;
+        // cursor: pointer;
         .window{
             width: 100%;
             height: 100%;
@@ -219,9 +219,9 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
                 }
                 @for $i from 1 through 30{
                     .star#{$i}{
-                        top: random(100)*1%;
-                        left: random(80)*-1% + 50%;
-                        animation-delay: $i*-0.1s;
+											top: random(100)*1%;
+											left: random(80)*-1% + 50%;
+											animation-delay: $i*-0.1s;
                     }
                 }
             }
@@ -231,6 +231,7 @@ $sunShadowColor: rgba(255, 221, 56, 0.5);
             height: 50%;
             right: 56px;
             bottom: 8px;
+						cursor: pointer;
             // border: 1px solid red;
             position: absolute;
             z-index: 4;

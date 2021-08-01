@@ -1,0 +1,75 @@
+@keyframes breath{
+	0%{opacity: 0.5;}
+	50%{opacity: 1;}
+	100%{opacity: 0.5;}
+}
+
+.skillSetsScope{
+	.skill-image_wrapper{
+		width: 100%;
+    padding-top: calc(100% * 4 / 3);
+		.image{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	.skill-title{
+		font-size: 20px;
+    color: #e996a5;
+	}
+	.skill-description{
+		font-size: 16px;
+		li {
+			margin-top: 8px;
+		}
+	}
+	.skillSets-copyRight{
+		bottom: 16px;
+		left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+		color: #9a9a9a;
+    z-index: 5;
+		a {
+			color: inherit;
+		}
+	}
+	.owl-nav{
+		text-align: center;
+		margin-top: 24px;
+		.owl-prev,.owl-next{
+			display: inline-block;
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			border: 1px solid #484848;
+			margin: 0 16px;
+			background-size: 16px;
+			background-repeat: no-repeat;
+			background-position: center;
+			animation: breath 2s infinite;
+		}
+		.owl-prev{
+			background-image: url('../images/icon/left-arrow.svg');
+		}
+		.owl-next{
+			background-image: url('../images/icon/right-arrow.svg');
+		}
+	}
+}
+
+// height: 48px;
+// width: 48px;
+// border-radius: 50%;
+// border: 1px solid #fefefe;
+// color: #fefefe;
+// position: absolute;
+// bottom: 24px;
+// left: 50%;
+// z-index: 5;
+// transform: translateX(-50%);
+// animation: breath 2s infinite;

@@ -6,49 +6,50 @@ import '../css/navRight.scss';
 import '../css/header.scss';
 import '../css/cover.scss';
 import '../css/experience.scss';
-import '../css/treeStyle.css';
-import '../css/html_css.css';
-import '../css/jsSkill.css';
-import '../css/backendSkill.css';
+// import '../css/treeStyle.css';
+// import '../css/html_css.css';
+// import '../css/jsSkill.css';
+// import '../css/backendSkill.css';
+import '../css/skillsets.scss';
 import '../css/sideProjects.scss';
 import '../css/careerGoal.scss';
 import '../css/footer.css';
 
 // js
-import cssTreeInit from './cssTree';
-import htmlTreeInit from './htmlTree';
-import jsTreeInit from './jsTree';
-import backendTreeInit from './backendTree';
+// import cssTreeInit from './cssTree';
+// import htmlTreeInit from './htmlTree';
+// import jsTreeInit from './jsTree';
+// import backendTreeInit from './backendTree';
 
 function fullPageInit () {
     $('#fullpage').fullpage({
         // options here
         licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
-        anchors:['slide1', 'slide2', 'slide3', 'slide4', 'slide5', 'slide6', 'slide7'],
+        anchors:['slide1', 'slide2', 'slide3', 'slide4', 'slide5'],
         // sectionsColor: ['#f7f8f9', '#ffffff', '#f6f9fc', '#ffffff', '#bbd3e5', '#f5f3f4', '#ffffff'],
         menu: '#nav-right-id',
         autoScrolling: false,
-		fitToSection: false,
+				fitToSection: false,
         scrollingSpeed: 1200,
         
         onLeave: function(origin, destination, direction){
-            let leavingSection = this;
+            // let leavingSection = this;
             
-            // 當要離開slide 2
-            if(origin.index === 1 && direction === 'down'){
-                htmlTreeInit();
-                cssTreeInit();
-            };
+            // // 當要離開slide 2
+            // if(origin.index === 1 && direction === 'down'){
+            //     htmlTreeInit();
+            //     cssTreeInit();
+            // };
 
-            // 當要離開slide 3
-            if(origin.index === 2 && direction === 'down'){
-                jsTreeInit();
-            };
+            // // 當要離開slide 3
+            // if(origin.index === 2 && direction === 'down'){
+            //     jsTreeInit();
+            // };
 
-            // 當要離開slide 4
-            if(origin.index === 3 && direction === 'down'){
-                backendTreeInit();
-            };
+            // // 當要離開slide 4
+            // if(origin.index === 3 && direction === 'down'){
+            //     backendTreeInit();
+            // };
         }
     });
 };
@@ -82,6 +83,33 @@ function handleWindowClick(){
     });
 }
 
+function owlCarouselInit(){
+	$('.owl-carousel').owlCarousel({
+		loop:true,
+		margin:16,
+		nav:true,
+		navText:[],
+		dots: false,
+		responsive:{
+				0:{
+					items:1
+				},
+				540:{
+					items:1
+				},
+				768:{
+					items:2
+				},
+				996:{
+					items:3
+				},
+				1200:{
+					items:4
+				}
+		}
+})
+}
+
 $(document).ready(function() {
 
     fullPageInit();
@@ -89,6 +117,8 @@ $(document).ready(function() {
     handleScroll();
 
     handleWindowClick();
+
+		owlCarouselInit();
 
     if ($(window).width() > 767) {
         // rellax init

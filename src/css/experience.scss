@@ -3,30 +3,30 @@
     margin: 0 auto;
     margin-top: 120px;	
     .timeline{
-        width: 4px;
-        height: 100%;
-        background-color: rgb(233, 150, 165);
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+			width: 4px;
+			height: 100%;
+			background-color: rgb(233, 150, 165);
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
     }
     .timeline-cards{
-        margin-left: 32px;
-        margin-right: 32px;
+			margin-left: 32px;
+			margin-right: 32px;
     }
     .timeline-card{
-        &:before{
-            content: "";
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background-color: rgb(233, 150, 165);
-            box-shadow:  0 3px 10px rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 50%;
-        }
+			&:before{
+				content: "";
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				background-color: rgb(233, 150, 165);
+				box-shadow:  0 3px 10px rgba(0, 0, 0, 0.5);
+				position: absolute;
+				top: 50%;
+			}
     }
 }
 
