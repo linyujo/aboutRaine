@@ -2,7 +2,7 @@
 
 # aboutRaine
 A static webpage of my personal resume.
-Demo application is deployed on AWS EC2. Please check it out: https://aboutraine.netlify.app
+Demo application is deployed on Netlify. Please check it out: https://aboutraine.netlify.app
 
 ## Tech/framework used
 - #### CSS
