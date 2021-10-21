@@ -4,11 +4,6 @@
 A static webpage of my personal resume.
 Demo application is deployed on AWS EC2. Please check it out: https://aboutraine.catcrush.club
 
-## Features
-* Mobile-friendly.
-<br>![cover](https://imgur.com/uhSrgPS.jpg)
-<br>![javascript](https://imgur.com/960TxuI.jpg)
-
 ## Tech/framework used
 - #### CSS
   - [Bootstrap](https://github.com/twbs/bootstrap)
